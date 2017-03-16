@@ -27,6 +27,10 @@ app.get('/', function (req, res) {
   res.send('Hello World!')
 })
 
+app.post('/', function (req, res) {
+  res.send('Receiving message thru Postman')
+})
+
 app.listen(8000, function () {
   console.log('Example app listening on port 3000!')
 })
