@@ -20,17 +20,17 @@ server.listen(port, hostname, () => {
 
 /* Using Express */
 
-var express = require('express')
-var app = express()
+const express = require('express');
+const app = express();
+const PORT = 8000;
 
-app.get('/', function (req, res) {
-  res.send('Hello World!')
+app
+  .get('/', (req, res) => {
+    res.send('Hello World!')
 })
-
-app.post('/', function (req, res) {
-  res.send('Receiving message thru Postman')
+  .post('/', (req, res) => {
+    res.send('Testing POST messages with Postman')
 })
-
-app.listen(8000, function () {
-  console.log('Example app listening on port 3000!')
+  .listen(PORT, () => {
+    console.log(`Example app listening on port ${PORT}`);
 })
