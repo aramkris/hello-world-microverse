@@ -1,4 +1,6 @@
 'use strict';
+/*
+This block is using Node.js inbuilt http module.
 
 const http = require('http');
 
@@ -14,3 +16,17 @@ const server = http.createServer((req, res) => {
 server.listen(port, hostname, () => {
   console.log(`Server running at http://${hostname}:${port}/`);
 });
+*/
+
+/* Using Express */
+
+var express = require('express')
+var app = express()
+
+app.get('/', function (req, res) {
+  res.send('Hello World!')
+})
+
+app.listen(8000, function () {
+  console.log('Example app listening on port 3000!')
+})
